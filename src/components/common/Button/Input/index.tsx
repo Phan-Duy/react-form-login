@@ -7,8 +7,8 @@ type InputProps = ComponentProps<"input"> & {
   variant?: "outline" | "filled" | "standard";
   label?: string;
   error?: FieldError | undefined;
-  trimOnBlur?: boolean; // Trim giá trị khi blur
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; // Hàm xử lý sự kiện onChange
+  trimOnBlur?: boolean; 
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; 
 };
 
 const inputVariants = cva(["input-base"], {
@@ -47,7 +47,7 @@ export default function Input({
     if (trimOnBlur) {
       e.target.value = e.target.value.trim();
     }
-    // Call onChange if provided
+    
     if (onChange) {
       onChange(e);
     }
